@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: url("../img/bgi.png") 0 0 no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-size: 14px;
+
+}
+
+#wrapper{
+	height: 100%;
+	width: 1000px;
+	margin: auto;
+	background: #c0c0c0;
+	position: relative;
+}
+
+header h1{
+	text-align: center;
+}
+
+section h3{
+	margin: 20px 0;
+}
+
+section ul,ol{
+	margin-left: 30px;
+}
+
+section p{
+	text-indent: 2em;
+}
+

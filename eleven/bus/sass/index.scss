@@ -1,0 +1,138 @@
+
+@mixin module($width, $height, $bgc) {
+    width: $width;
+    height: $height;
+    background-color: $bgc;
+    box-sizing: border-box;
+}
+
+@mixin module-1($display, $float) {
+    display: $display;
+    float: $float;
+}
+
+@mixin module-2($radius, $b-width, $bc, $b-style) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border: $b-style, $b-width, $bc;
+}
+
+.table-border {
+    border-collapse: collapse;
+}
+
+.table-p {
+    font-size: 10px;
+    font-weight: 500;
+    margin: 0;
+    float: right;
+}
+
+.table-td {
+    margin: 0;
+    padding: 0;
+    height: 110px;
+    box-sizing: border-box;
+}
+
+.l-arrows{
+	border-bottom:solid 13px green;
+	border-top:solid 0px green;
+	border-left:solid 40px #fff;
+	border-right:solid 0px green;
+}
+
+@mixin module-3($mt, $mr, $mb, $ml, $pt, $pr, $pb, $pl) {
+    margin: $mt $mr $mb $ml;
+    padding: $pt $pr $pb $pl;
+}
+
+@mixin fontm($fs, $lh, $fw, $ta, $color) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    text-align: $ta;
+    color: $color;
+}
+
+%border {
+    border: solid 1px #fff;
+    border-radius: 4px;
+}
+
+@for $i from 1 through 2 {
+    .container-#{$i} {
+        @if $i>1 {
+            margin-top: 20px;
+        }
+        @else {
+            margin-top: 0;
+        }
+        @include module(800px, 140px, orange);
+        @include module-2(4px, 1px, #fff, solid);
+    }
+    .b-number-#{$i} {
+        @include module(140px, 140px, gray);
+        @include module-1(inline-block, left);
+    }
+    .staions-#{$i} {
+        @include module(660px, 140px, #fff);
+        @include module-1(inline-block, left);
+    }
+    .round-#{$i} {
+        @include module(80px, 80px, #fff);
+        @include fontm(40px, 80px, 700, center, #000);
+        @include module-2(40px, 0, #fff, solid);
+        @include module-3(0, 0, 0, 30px, 0, 0, 0, 0);
+    }
+    .l-station-#{$i},
+    .n-station-#{$i} {
+        @include module(140px, 30px, gray);
+        @include fontm(16px, 30px, normal, center, #fff)
+    }
+}
+
+.table {
+    @include module(660px, 140px, orange);
+    @extend .table-border;
+    .row-1,
+    .row-3 {
+        @include module(660px, 15px, #fff);
+    }
+    .row-2 {
+        @include module(660px, 110px, #fff);
+        td {
+            @extend .table-td;
+        }
+    }
+    th {
+
+        @include fontm(10px, 13px, 500,right, black);
+        
+       
+    }
+    p {
+        @include module(10px, 110px, #fff);
+        @extend .table-p;
+    }
+}
+
+.arrows {
+    @include module(660px, 14px, #fff);
+    .arrows-left{
+    	@include module(0,0,green);
+    	@extend .l-arrows;
+    	@include module-1(inline-block,left);
+		
+    }
+    .arrows-right{
+    	@include module(620px,7px,green);
+    	@include module-1(inline-block,left);
+    	margin-top:6px;
+    }
+}
+
+

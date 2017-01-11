@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="css/baidu.css">
+</head>
+
+<body>
+    <div id="wrapper" style="display: block;">
+        <div id="head">
+            <div class="head-wrapper">
+                <!--search box-->
+                <div class="s-form">
+                    <div class="s-form-wrapper">
+                        <div id="lg">
+                            <img src="images/logo_white.png" alt="LOGO">
+                        </div>
+                        <form action="http://www.baidu.com/s" name="f" action="/s" class="fm" id="form">
+                            <span class="quickdelate-wrap" id="search">
+								<span class="soutu-btn"></span>
+                            <input type="text" id="kw" name="wd" class="inp" value="" maxlength="225" autocomplete="off">
+                            </span>
+                            <span class="s-btn">
+								<button type="submit" id="su" value="百度一下" class="st-btn">百度一下</button>
+							</span>
+                        </form>
+                    </div>
+                </div>
+                <!--searchbox end-->
+                
+                <div id="ul">
+                    <a href="http://www.nuomi.com/?cid=002540" name="nuomi" class="mnav">糯米</a>
+                    <a href="http://news.baidu.com" name="news" class="mnav">新闻</a>
+                    <a href="http://www.hao123.com" name="hao123" class="mnav">hao123</a>
+                    <a href="http://map.baidu.com" name="map" class="mnav">地图</a>
+                    <a href="http://v.baidu.com" name="video" class="mnav">视频</a>
+                    <a href="http://tieba.baidu.com" name="tieba" class="mnav">贴吧</a>
+                    <a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" name="login" class="lb" onclick="return false">登录</a>
+                    <a href="http://www.baidu.com/gaoji/preferences.html" class="pf">设置</a>
+                    <a href="http://www.baidu.com/more/" name="briicon" class="bri" id="bri">更多产品</a>
+                </div>
+                <!--左上换肤-->
+                <div id="s-upfunc-menus" id="s-upfunc-menus">
+                    <div class="s-weather-wrapper"></div>
+                    <div class="s-icons" id="s-icons">
+                        <a href="#" class="s-treasure" onclick="return false">
+                            <span class="title">宝箱</span>
+                        </a>
+                        <a href="#" class="s-skin" onclick="return false" title="换肤">
+                            <span class="title">点击换肤</span>
+                        </a>
+                        <a href="#" class="s-msg" onclick="return false">
+                            <span class="title">消息</span>
+                        </a>
+                    </div>
+                </div>
+                <!--换肤 end-->
+                <!--更多产品-->
+                <div class="bdbri bdbriimg" style="opacity: 1;min-height: 600px;display:none;">
+                    <div class="bdbriimgtittle">更多产品</div>
+                    <div brscrollwrapperContainer>
+                        <div class="bdbriwrapper">
+                            <a href="http://music.baidu.com" name="mp3">
+                                <span class="bdbriimgitem-3"></span> 音乐
+                            </a>
+                            <a href="http://image.baidu.com" name="img">
+                                <span class="bdbriimgitem-4"></span> 图片
+                            </a>
+                            <a href="http://zhidao.baidu.com" name="zhidao">
+                                <span class="bdbriimgitem-2"></span> 知道
+                            </a>
+                            <a href="http://wenku.baidu.com" name="wenku">
+                                <span class="bdbriimgitem-5"></span> 文库
+                            </a>
+                            <a href="http://top.baidu.com" name="bang">
+                                <span class="bdbriimgitem-6"></span> 风云榜
+                            </a>
+                            <div class="bdbrievenmore">
+                                <a href="http://www.baidu.com/more/" name="more">全部产品>></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--更多产品end-->
+                <div id="bgimage" style="display: none;">
+                	<ul id="mimage">
+                		<li>
+                			<img src="images/U2.jpg" alt="">
+                		</li>
+                		<li>
+                			<img src="images/pretty.jpg" alt="">
+                		</li>
+                		<li>
+                			<img src="images/xixili.jpg" alt="">
+                		</li>
+                		<li>
+                			<img src="images/tongyang.jpg" alt="">
+                		</li>
+                		<li>
+                			<img src="images/ACDC.jpg" alt="">
+                		</li>
+                	</ul>
+                </div>
+            </div>
+            <!--定制推荐-->
+            <div id="s_wrap" style="padding-top: 0;">
+                <div id="s_main">
+                    <div id="s_mancard_main">
+                        <div class="s-menu-container">
+                            <div id="s-menu-gurd">
+                                <div id="s-ctner-menus">
+                                    <span id="s-menu-mine">
+                        				<div class="mine-icon"></div>
+                        				<div class="mine-text">我的关注</div>
+                        			</span>
+                                    <div class="s-menu-outer">
+                                        <div id="s-menu-wrapper">
+                                            <span class="s-menu-item">推荐</span>
+                                            <span class="s-menu-item">导航</span>
+                                            <span class="s-menu-item">视频</span>
+                                            <span class="s-menu-item">购物</span>
+                                        </div>
+                                    </div>
+                                    <span id="s-menu-set">
+                        				<i class="menu-icon"></i>
+                        			</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="c-ctner-contents">
+                            <div id="s-content-1" class="s-content-special" style="display: none;">
+                                <div id="s-xmancard-mine">
+                                    <div class="myguide">
+                                        <div class="s-code-nav">
+                                            <div class="s-block-container">
+                                                <div class="s-mblock-title">
+                                                    <div class="title-content">
+                                                        <span class="mine-title">
+                        									<div class="mine-title-icon">
+                        										<i class="beforech"></i>
+                        									</div>
+                        									<span class="mine-title-text">我的导航</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="s-mblock-content">
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="nav-item">
+                                                        <a class="border-for-item" title="百度贴吧" href="http://tieba.baidu.com/" data-fanliurl="" target="_blank">
+                                                            <img src="./images/s-logo.png" alt="百度贴吧" height="16" width="16" class="nav-icon">
+                                                            <div class="nav-text">
+                                                                <span class="nav-text-content">百度贴吧</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="s-content-2" class="s-content" style="display: none;">
+                                <div id="s-xmancard-news">
+                                    <div class="s-news-rank-wrapper">
+                                        <div class="s-rank-tite">
+                                            <div class="title-text">
+                                                <a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a>
+                                            </div>
+                                            <a class="hot-refresh">
+                                                <span class="hot-refresh-icon"></span>
+                                                <span class="hot-refresh-text">换一换</span>
+                                            </a>
+                                        </div>
+                                        <ul class="s-news-rank-content">
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li class="news-meta-item">
+                                                <span class="news-title">
+                            				<span class="title-link">
+                            					<a class="title-content" href="https://www.baidu.com/s?cl=3&amp;tn=baidutop10&amp;fr=top1000&amp;wd=%E8%80%81%E9%93%B6%E6%9D%8F%E6%A0%91%E9%95%BF%E5%87%BA%E4%BA%BA%E8%84%B8&amp;rsv_idx=2" target="_blank">老银杏树长出人脸</a>
+                            					<span class="new-identity">
+                            					</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-flash-tips">
+                                        <div class="left-line border-color-blank8"></div>
+                                        <div class="tips-content">
+                                            <div class="tips-icon"></div>
+                                            <spany>以下信息根据您的兴趣推荐</span>
+                                        </div>
+                                        <div class="right-line border-color-blank8"></div>
+                                    </div>
+                                    <div class="water-container">
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                        <div class="s-news-special">
+                                            <img src="./images/ujh.JPEG" alt="">
+                                            <a href="#">朴槿惠本周或第三次向国民道歉 三拒检方调查</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="s-content-3" class="s-content" style="display: none;">
+                                <div id="conjecture">
+                                    <span class="cni">猜你喜欢</span>
+                                    <div class="clear"></div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                    <div class="fanli-nav">
+                                        <a href="#">
+                                            <img src="./images/n-logo.png" alt="">
+                                            <span class="nav-text">百度糯米</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="s-content-4" class="s-content" style="display: none;">
+                                <div id="movies">
+                                    <span>影视频道</span>
+                                </div>
+                                <div id="movie">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                    <img src="./images/alonewaite.jpg" alt="movie" style="width: 195px;height: 270px;">
+                                </div>
+                            </div>
+                            <div id="s-content-5" class="s-content" style="display: block;">
+                            	<div id="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+                            		<img src="./images/chi.jpg" alt="food">
+
+                            	</div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div id="bottom-container">
+                    <div class="ftcon-wrapper">
+                        <div class="no-qrcode-layer">
+                            <div>
+                                <p class="ih">
+                                    <a href="//www.baidu.com/cache/sethelp/index.html" target="_blank" class="sethome">设为首页</a>
+                                </p>
+                                <span class="copyright-text">
+                                <span>©2016&nbsp;Baidu&nbsp;</span>
+                                <a href="//www.baidu.com/duty/" target="_blank">使用百度前必读</a>&nbsp;
+                                <a href="http://jianyi.baidu.com" target="_blank">意见反馈</a>&nbsp;
+                                <span>京ICP证030173号&nbsp;</span>
+                                <img width="13" height="16" src="./images/copy_rignt.png">
+                                </span>
+                            </div>
+                            <div class="recordcode">
+                                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">
+                                    <i></i> 京公网安备11000002000001号
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--定制推荐 end-->
+        </div>
+        <div id="btn" style="display: none;">
+            <div class="icon-mask">
+                <span class="text">回到顶部</span>
+            </div>
+            <a href="javascript:;" class="icon"></a>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/baidu.js"></script>
+</body>
+
+</html>

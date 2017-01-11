@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>前端面试题</title>
+    <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>高级前端面试题</h1>
+        </header>
+        <section>
+            <h3>position的值， relative和absolute分别是相对于谁进行定位的？</h3>
+            <ul>
+                <li>absolute：生成绝对定位的元素，相对于最近一级的定位不是static的父元素来进行定位</li>
+                <li>fixed：生成绝对定位的元素，通常相对于浏览器窗口或frame定位</li>
+                <li>relative：生成相对定位的元素，相对于其他在普通流中的位置进行定位</li>
+                <li>static：默认值，没有定位，元素出现在正常流中</li>
+                <li>sticky：生成粘性定位的元素，容器的位置根据正常文档流计算得出</li>
+            </ul>
+            <h3>display:none和visibility:hidden的区别？</h3>
+            <p>display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。</p>
+            <p>visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。</p>
+            <h3>CSS中 link 和@import 的区别是？</h3>
+            <ol>
+                <li>link属于HTML标签，而@import是CSS提供的;</li>
+                <li>页面被加载的时，link会同时被加载，而@import被引用的CSS会等到引用它的CSS文件被加载完再加载;</li>
+                <li>import只在IE5以上才能识别，而link是HTML标签，无兼容问题;</li>
+                <li>link方式的样式的权重 高于@import的权重.</li>
+            </ol>
+            <h3>position:absolute和float属性的异同</h3>
+            <p>共同点：对内联元素设置float和absolute属性，可以让元素脱离文档流，并且可以设置其宽高。</p>
+            <p>不同点：float仍会占据位置，absolute会覆盖文档流中的其他元素。</p>
+            <h3>介绍一下box-sizing属性？</h3>
+            <p>box-sizing属性主要用来控制元素的盒模型的解析模式。默认值是content-box。</p>
+            <p>content-box：让元素维持W3C的标准盒模型。元素的宽度/高度由border + padding + content的宽度/高度决定，设置width/height属性指的是content部分的宽/高</p>
+            <p>border-box：让元素维持IE传统盒模型（IE6以下版本和IE6~7的怪异模式）。设置width/height属性指的是border + padding + content</p>
+            <p>标准浏览器下，按照W3C规范对盒模型解析，一旦修改了元素的边框或内距，就会影响元素的盒子尺寸，就不得不重新计算元素的盒子尺寸，从而影响整个页面的布局。</p>
+            <h3>CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</h3>
+            <ol>
+                <li>id选择器（ # myid）</li>
+                <li>类选择器（.myclassname）</li>
+                <li>标签选择器（div, h1, p）</li>
+                <li>相邻选择器（h1 + p）</li>
+                <li>子选择器（ul > li）</li>
+                <li>后代选择器（li a）</li>
+                <li>通配符选择器（ * ）</li>
+                <li>属性选择器（a[rel = "external"]）</li>
+                <li>伪类选择器（a: hover, li:nth-child）</li>
+            </ol>
+            <p>优先级为: !important > id > class > tag,important 比 内联优先级高,但内联比 id 要高</p>
+            <h3>CSS3有哪些新特性？</h3>
+            <p>CSS3实现圆角（border-radius），阴影（box-shadow）， 对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform） transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜 增加了更多的CSS选择器 多背景 rgba 在CSS3中唯一引入的伪元素是::selection. 媒体查询，多栏布局 border-image
+            </p>
+            <h3>说说你对作用域链的理解</h3>
+            <p>作用域链的作用是保证执行环境里有权访问的变量和函数是有序的，作用域链的变量只能向上访问，变量访问到window对象即被终止，作用域链向下访问变量是不被允许的。</p>
+            <p>CSS3中新增了一种盒模型计算方式：box-sizing。盒模型默认的值是content-box, 新增的值是padding-box和border-box</p>
+            <h3>说说你对语义化的理解？</h3>
+            <ol>
+                <li>去掉或者丢失样式的时候能够让页面呈现出清晰的结构</li>
+                <li>有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；</li>
+                <li>方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；</li>
+                <li>便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。</li>
+            </ol>
+            <h3>Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h3>
+            <ol>
+                <li>&lt;DOCTYPE&gt; 声明位于文档中的最前面，处于 &lt;html&gt; 标签之前。告知浏览器以何种模式来渲染文档。</li>
+                <li>严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。</li>
+                <li>在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</li>
+                <li>&lt;DOCTYPE&gt;不存在或格式不正确会导致文档以混杂模式呈现。</li>
+            </ol>
+            <h3>解释下浮动和它的工作原理？清除浮动的技巧</h3>
+            <p>浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。</p>
+            <ol>
+                <li>使用空标签清除浮动。
+                    <p>这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。</p>
+                </li>
+                <li>
+                    使用overflow。
+                    <p>给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。</p>
+                </li>
+                <li>
+                    使用after伪对象清除浮动。
+                    <p>该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；</p>
+                </li>
+            </ol>
+            <h3>浮动元素引起的问题和解决办法？</h3>
+            <p>浮动元素引起的问题：</p>
+            <ol>
+                <li>父元素的高度无法被撑开，影响与父元素同级的元素</li>
+                <li>与浮动元素同级的非浮动元素（内联元素）会跟随其后</li>
+                <li>若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构</li>
+            </ol>
+            <p>解决方法：</p>
+            <p>使用CSS中的clear:both;属性来清除元素的浮动可解决2、3问题，对于问题1，添加如下样式，给父元素添加clearfix样式：</p>
+            <p>.clearfix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;} .clearfix{display: inline-block;} /* for IE/Mac */</p>
+            <p>清除浮动的几种方法：</p>
+            <pre>
+                1，额外标签法，&lt;div style="clear:both;">&lt;/div>（缺点：不过这个办法会增加额外的标签使HTML结构看起来不够简洁。）
+
+                2，使用after伪类
+
+                #parent:after{
+
+                    content:".";
+
+                    height:0;
+
+                    visibility:hidden;
+
+                    display:block;
+
+                    clear:both;
+
+                    }
+
+                3,浮动外部元素
+
+                4,设置overflow为hidden或者auto
+            </pre>
+            <h3>DOM操作——怎样添加、移除、移动、复制、创建和查找节点。</h3>
+            <p>1）创建新节点</p>
+            <ul>
+                <li> createDocumentFragment() //创建一个DOM片段</li>
+                <li>createElement() //创建一个具体的元素</li>
+                <li> createTextNode() //创建一个文本节点</li>
+            </ul>
+            <p>2）添加、移除、替换、插入</p>
+            <p> appendChild() ,removeChild(), replaceChild() ,insertBefore() //并没有insertAfter()</p>
+            <h3>查找</h3>
+            <p>getElementsByTagName() //通过标签名称, getElementsByName() //通过元素的Name属性的值(IE容错能力较强， 会得到一个数组，其中包括id等于name值的), getElementById() //通过元素Id，唯一性</p>
+            <h3>null和undefined的区别？</h3>
+            <p>null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN。 当声明的变量还未被初始化时，变量的默认值为undefined。 null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+            </p>
+            <p>undefined表示"缺少值"，就是此处应该有一个值，但是还没有定义。典型用法是：</p>
+            <ul>
+                <li>变量被声明了，但没有赋值时，就等于undefined。</li>
+                <li>调用函数时，应该提供的参数没有提供，该参数等于undefined。</li>
+                <li>对象没有赋值的属性，该属性的值为undefined。</li>
+                <li>函数没有返回值时，默认返回undefined。</li>
+            </ul>
+            <p>null表示"没有对象"，即该处不应该有值。典型用法是：</p>
+            <ul>
+                <li>作为函数的参数，表示该函数的参数不是对象。
+                </li>
+                <li>作为对象原型链的终点。</li>
+            </ul>
+            <h3>new操作符具体干了什么呢?</h3>
+            <ul>
+                <li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</li>
+                <li>属性和方法被加入到 this 引用的对象中。</li>
+                <li>新创建的对象由 this 所引用，并且最后隐式的返回 this 。</li>
+            </ul>
+            <pre>
+                var obj  = {};
+
+                obj.__proto__ = Base.prototype;
+
+                Base.call(obj);
+            </pre>
+            <h3>WEB应用从服务器主动推送Data到客户端有那些方式？</h3>
+            <p>Javascript数据推送</p>
+            <ul>
+                <li>Commet：基于HTTP长连接的服务器推送技术</li>
+                <li>基于WebSocket的推送方案</li>
+                <li>SSE（Server-Send Event）：服务器推送数据新方式</li>
+            </ul>
+            <h3>javascript对象的几种创建方式</h3>
+            <pre>
+                1，工厂模式
+
+                2，构造函数模式
+
+                3，原型模式
+
+                4，混合构造函数和原型模式
+
+                5，动态原型模式
+
+                6，寄生构造函数模式
+
+                7，稳妥构造函数模式
+            </pre>
+            <h3>javascript继承的6种方法</h3>
+            <pre>
+                1，原型链继承
+
+                2，借用构造函数继承
+
+                3，组合继承(原型+借用构造)
+
+                4，原型式继承
+
+                5，寄生式继承
+
+                6，寄生组合式继承
+            </pre>
+            <h3>创建ajax过程</h3>
+            <ol>
+                <li>创建XMLHttpRequest对象,也就是创建一个异步调用对象.</li>
+                <li>创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.</li>
+                <li>设置响应HTTP请求状态变化的函数</li>
+                <li>发送HTTP请求.</li>
+                <li>获取异步调用返回的数据</li>
+                <li>使用JavaScript和DOM实现局部刷新.</li>
+            </ol>
+            <pre>
+                var xmlHttp = new XMLHttpRequest();
+
+                xmlHttp.open('GET','demo.php','true');
+
+                xmlHttp.send()
+
+                xmlHttp.onreadystatechange = function(){
+
+                    if(xmlHttp.readyState === 4 & xmlHttp.status === 200){
+
+                    }
+
+                }
+            </pre>
+            <h3>GET和POST的区别，何时使用POST？</h3>
+            <p> GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符</p>
+            <p>POST：一般用于修改服务器上的资源，对所发送的信息没有限制。</p>
+            <p> GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值， 也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。</p>
+            <p>然而，在以下情况中，请使用 POST 请求：</p>
+            <p>无法使用缓存文件（更新服务器上的文件或数据库） 向服务器发送大量数据（POST 没有数据量限制） 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</p>
+            <h3>事件、IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h3>
+            <pre>
+                1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。
+                2. 事件处理机制：IE是事件冒泡、firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件。；
+                3. `ev.stopPropagation()`;注意旧ie的方法 `ev.cancelBubble = true`;
+            </pre>
+            <h3>渐进增强和优雅降级</h3>
+            <p>渐进增强 ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+            <p>优雅降级 ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+            <h3>Javascript垃圾回收方法</h3>
+            <p>标记清除：这是JavaScript最常见的垃圾回收方式，当变量进入执行环境的时候，比如函数中声明一个变量，垃圾回收器将其标记为“进入环境”，当变量离开环境的时候（函数执行结束）将其标记为“离开环境”。 垃圾回收器会在运行的时候给存储在内存中的所有变量加上标记，然后去掉环境中的变量以及被环境中变量所引用的变量（闭包），在这些完成之后仍存在标记的就是要删除的变量了
+            </p>
+            <p>引用计数：在低版本IE中经常会出现内存泄露，很多时候就是因为其采用引用计数方式进行垃圾回收。引用计数的策略是跟踪记录每个值被使用的次数，当声明了一个 变量并将一个引用类型赋值给该变量的时候这个值的引用次数就加1，如果该变量的值变成了另外一个，则这个值得引用次数减1，当这个值的引用次数变为0的时 候，说明没有变量在使用，这个值没法被访问了，因此可以将其占用的空间回收，这样垃圾回收器会在运行的时候清理掉引用次数为0的值占用的空间。在IE中虽然JavaScript对象通过标记清除的方式进行垃圾回收，但BOM与DOM对象却是通过引用计数回收垃圾的， 也就是说只要涉及BOM及DOM就会出现循环引用问题。
+            </p>
+            <h3>说说你对闭包的理解</h3>
+            <p>使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念</p>
+            <p>闭包有三个特性：</p>
+            <ol>
+                <li>函数嵌套函数</li>
+                <li>函数内部可以引用外部的参数和变量</li>
+                <li>参数和变量不会被垃圾回收机制回收</li>
+            </ol>
+            <h3>请你谈谈Cookie的弊端</h3>
+            <p>cookie虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的。</p>
+            <p>第一：每个特定的域名下最多生成20个cookie</p>
+            <ol>
+                <li>IE6或更低版本最多20个cookie</li>
+                <li>IE7和之后的版本最后可以有50个cookie。</li>
+                <li>Firefox最多50个cookie</li>
+                <li>chrome和Safari没有做硬性限制</li>
+            </ol>
+            <p>IE和Opera 会清理近期最少使用的cookie，Firefox会随机清理cookie。</p>
+            <p>cookie的最大大约为4096字节，为了兼容性，一般不能超过4095字节。</p>
+            <p>IE 提供了一种存储可以持久化用户数据，叫做userdata，从IE5.0就开始支持。每个数据最多128K，每个域名下最多1M。这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。</p>
+            <p>优点：极高的扩展性和可用性</p>
+            <ol>
+                <li>通过良好的编程，控制保存在cookie中的session对象的大小。</li>
+                <li>通过加密和安全传输技术（SSL），减少cookie被破解的可能性。</li>
+                <li>只在cookie中存放不敏感数据，即使被盗也不会有重大损失。</li>
+                <li>控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。</li>
+            </ol>
+            <p>缺点：</p>
+            <ol>
+                <li>`Cookie`数量和长度的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉.</li>
+                <li>安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。即使加密也与事无补，因为拦截者并不需要知道cookie的意义，他只要原样转发cookie就可以达到目的了。</li>
+                <li>有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。</li>
+            </ol>
+            <h3>浏览器本地存储</h3>
+            <p>在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage。 html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage。 sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。 而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
+            </p>
+            <h3>cookie 和session 的区别：</h3>
+            <ol>
+                <li>cookie数据存放在客户的浏览器上，session数据放在服务器上。
+                </li>
+                <li>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗 考虑到安全应当使用session。
+                </li>
+                <li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能 考虑到减轻服务器性能方面，应当使用COOKIE。
+                </li>
+                <li>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</li>
+            </ol>
+            <h3>实现一个函数clone，可以对JavaScript中的5种主要的数据类型（包括Number、String、Object、Array、Boolean）进行值复制</h3>
+            <pre>
+                Object.prototype.clone = function(){
+
+                    var o = this.constructor === Array ? [] : {};
+
+                    for(var e in this){
+
+                            o[e] = typeof this[e] === "object" ? this[e].clone() : this[e];
+
+                    }
+
+                    return o;
+                }
+            </pre>
+            <h3>document.write()的用法</h3>
+            <p>document.write()方法可以用在两个方面：页面载入过程中用实时脚本创建页面内容，以及用延时脚本创建本窗口或新窗口的内容。</p>
+            <p>document.write只能重绘整个页面。innerHTML可以重绘页面的一部分</p>
+            <h3>编写一个方法 求一个字符串的字节长度</h3>
+            <p>假设：一个英文字符占用一个字节，一个中文字符占用两个字节</p>
+            <pre>
+                function GetBytes(str){
+
+                    var len = str.length;
+
+                    var bytes = len;
+
+                    for(var i=0; i<len; i++){
+
+                        if (str.charCodeAt(i) > 255) bytes++;
+
+                    }
+
+                    return bytes;
+
+                }
+
+                alert(GetBytes("你好,as"));
+            </pre>
+            <h3>git fetch和git pull的区别</h3>
+            <p>git pull：相当于是从远程获取最新版本并merge到本地</p>
+            <p>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</p>
+            <h3>attribute和property的区别是什么？</h3>
+            <p>property就是dom元素在js中作为对象拥有的属性。 所以： 对于html的标准属性来说，attribute和property是同步的，是会自动更新的， 但是对于自定义的属性来说，他们是不同步的
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>
